@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="Wheel.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="MaterialDesignIcons">./Resources/MaterialDesignIcons/#Material Icons</FontFamily>
     </Application.Resources>
 </Application>

@@ -26,6 +26,6 @@
 
         <!-- 背景层：圆形窗体中心层 -->
         <Ellipse Width="100" Height="100" Fill="Green"/>
-        <TextBlock Name="txtMessage" FontSize="50" TextAlignment="Center" Text="1234"/>
+        <TextBlock Name="txtMessage" FontFamily="{StaticResource MaterialDesignIcons}" FontSize="50" TextAlignment="Center" Text="&#xe88a;"/>
     </Grid>
 </Window>

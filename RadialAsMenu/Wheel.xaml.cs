@@ -64,7 +64,7 @@ namespace RadialAsMenu
             if (e.ChangedButton == MouseButton.Left)
             {
                 var angle = _pads.Last().GetSelectAngle();
-                txtMessage.Text= angle.ToString();
+                //txtMessage.Text= angle.ToString();
                 var pad = new RadialPad(RadialPadMode.HalfCircle, angle)
                 {
                     Height = 250+ _pads.Count *50,
