@@ -3,9 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" Loaded="MainWindow_OnLoaded"
+        WindowStartupLocation="CenterScreen" MouseWheel="MainWindow_OnMouseWheel"
+        Title="MainWindow" Height="600" Width="600" WindowStyle="None"  MouseDown="MainWindow_OnMouseDown"
+        AllowsTransparency="True" Background="Transparent">
+    <Window.Resources>
+        <Storyboard x:Key="Ring2InAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5" />
+        </Storyboard>
+    </Window.Resources>
     <Grid>
+        <Ellipse Width="600" Height="600"  Fill="Transparent" />
+        <Ellipse Width="400" Height="400"  Fill="Transparent" />
 
+        <!-- 摆放你的扇形按钮 -->
+        <Grid Name="grdButtonRing" Background="Transparent">
+            <Path Fill="BlueViolet" Data="M 300,300 L 12.152107915650845,215.48023294757098 A 300,300 0 0 1 47.623940150645666,137.80775476332067 Z"/>
+            <Path Fill="Blue" Data="M 300,300 L 47.623940150645666,137.80775476332067 A 300,300 0 0 1 103.54177981641439,73.2751276937226 Z"/>
+            <Path Fill="Gray" Data="M 300,300 L 500,300 A 200,200 0 0 1 386.81,485.28 Z"/>
+            <Path Fill="Gray" Data="M 300,300 L 300,100 A 200,200 0 0 1 408.12816349111955,131.74929343376377 Z"/>
+        </Grid>
+
+        <!-- 背景层：圆形窗体中心层 -->
+        <Ellipse Width="100" Height="100" Fill="Green"/>
+        <TextBlock Name="txtMessage" FontSize="50" TextAlignment="Center" Text="1234"/>
     </Grid>
 </Window>
